@@ -3,15 +3,15 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-grade = 1
 passing_score = 0.5
-score = 0
 curve = 0
-year = 0
 report_card = pd.DataFrame(columns=["passing_score", "student", "years"])
+year = 0
+grade = 1
 
 while passing_score < 1:
-    for students in range(1000):
+    for students in range(10):
+        grade = 1
         while grade <= 12:
             score = uniform(curve, 1)
             if score > passing_score:
@@ -26,5 +26,4 @@ while passing_score < 1:
                              index=[0])
         report_card = pd.concat([report_card,x_df], ignore_index=True)
     passing_score += 0.1
-
 report_card.to_csv("report_card.csv")
