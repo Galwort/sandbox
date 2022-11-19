@@ -27,7 +27,7 @@ def limit_handled(cursor):
             print('we did ' + str(i) + ' tweety tweets')
             print(strftime("%H:%M:%S", gmtime()))
             print('i go sleep now')
-            sleep(60 * 15)
+            sleep(61 * 15)
             print(strftime("%H:%M:%S", gmtime()), 'i wake up now')
         except StopIteration:
             break
