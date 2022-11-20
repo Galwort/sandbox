@@ -19,7 +19,7 @@ while passing_score < 100:
             score = uniform(curve, 100)
             if score > passing_score:
                 grade += 1
-                curve = score - 50
+                curve = score - 10 * grade
                 year += 1
             elif score <= passing_score:
                 year += 1
