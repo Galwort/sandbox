@@ -30,4 +30,20 @@ while passing_score < 100:
         report_card = pd.concat([report_card,x_df], ignore_index=True)
         student += 1
     passing_score += 1
-report_card.to_csv("report_card.csv", index=False)
+
+# report_card.to_csv("report_card.csv", index=False)
+
+sns.set_style("whitegrid")
+sns.set_context("poster")
+sns.set_palette("Set2")
+sns.set_color_codes("pastel")
+sns.set(rc={'figure.figsize':(11.7,8.27)})
+sns.set(font_scale=1.5)
+sns.set_style("ticks")
+sns.set_style({"xtick.direction": "in","ytick.direction": "in"})
+sns.set_style({"xtick.major.size": 8, "ytick.major.size": 8})
+sns.set_style({"xtick.minor.size": 4, "ytick.minor.size": 4})
+
+sns_plot = sns.boxplot(x="passing_score", y="years", data=report_card)
+sns_plot.set(xlabel='Passing Score', ylabel='Years to Graduate')
+sns_plot.figure.savefig("graduation.png")
