@@ -1,0 +1,4 @@
+Accuracy is (TP + TN) / (TP + TN + FP + FN).
+Precision is TP / (TP + FP).
+Recall is TP / (TP + FN).
+A kilobyte is 1024 bytes. A megabyte is 1024 kilobytes. A gigabyte is 1024 megabytes.
