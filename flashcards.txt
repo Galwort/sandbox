@@ -1,4 +1,67 @@
 Accuracy is (TP + TN) / (TP + TN + FP + FN).
-Precision is TP / (TP + FP).
-Recall is TP / (TP + FN).
+Precision is TP / (TP + FP), and is also called positive predictive value.
+Recall is TP / (TP + FN), and is also known as sensitivity.
 A kilobyte is 1024 bytes. A megabyte is 1024 kilobytes. A gigabyte is 1024 megabytes.
+The three types of data are tabular, image, and text.
+Generalizability is the ability of a model to predict new, previously unseen test sets.
+A kernal trick allows the data to be transformed into multiple dimensions in SVM.
+Supervised machine learning is when the data is labeled.
+Unsupervised machine learning is when the data is unlabeled.
+Categorical data is data that can be sorted into categories.
+Loss refers to the difference between the predicted value and the actual value.
+Data science is the process of extracting knowledge from data. AI is the ability of a machine to perform tasks that normally require human intelligence. Machine learning is the ability of a machine to learn from data without being explicitly programmed.
+Matthews correlation coefficient is a measure of the quality of binary and multiclass classifications.
+Target variable is the variable that is being predicted, and can also be referred to as the label.
+Train-test split is a method of splitting data into training and testing sets.
+y = fx + e, in which e represents error.
+Bias is the difference between the average prediction of our model and the correct value which we are trying to predict.
+Variance is the variability of a model prediction for a given data point.
+F1 score is 2 / (1 / precision + 1 / recall).
+A hyperparameter is a parameter whose value is set before the learning process begins.
+Sensitivity is TP / (TP + FN), and is also referred to as recall.
+Specificity is TN / (TN + FP), and is also known as true negative rate.
+ROC stands for receiver operating characteristic.
+AUC stands for area under the curve.
+ROC-AUC is a performance measurement for classification problems at various thresholds settings.
+PCA stands for Principal Component Analysis.
+One hot encoding is a process by which categorical variables are pivoted into binary variables.
+A confidence interval is a range of values that is likely to contain the true value of a parameter.
+Prevalence is the proportion of the data that has the positive class.
+Null accuracy is the accuracy that could be achieved by always predicting the most frequent class.
+Imputation is the process of replacing missing data with substituted values.
+Multicollinearity is when two or more independent variables are highly correlated.
+Univariate analysis is the analysis of one variable at a time.
+Kappa is observed accuracy - null accuracy / 1 - null accuracy.
+Kappa is considered reliable when it is greater than 0.9, and non-reliable under 0.2.
+Ternary operators are written as thing if condition else other thing.
+GAN is a generative adversarial network, designed by Ian Goodfellow and his colleagues in 2014, use two neural networks: a generator and a discriminator.
+Stable diffusion is an open source model that can be used to generate images from text, among other things.
+GPT-3 is a language model that can generate text.
+BERT is a language model that can generate text.
+LOINC stands for Logical Observation Identifiers Names and Codes, and is a standard for identifying medical laboratory observations.
+An epoch is a single pass through the entire dataset.
+GPU stands for graphics processing unit.
+HL7 (Health Level 7) is a standard for sharing health care information electronically.
+PACS stands for picture archiving and communication system, and is used in radiology.
+OSI standards are a set of standards for computer systems to communicate with each other.
+DICOM stands for Digital Imaging and Communications in Medicine, and is a standard for sharing information in medical imaging.
+X12 is a standard for healthcare transactions in billing and claims.
+NOIR is a mnemonic for the four types of data: numerical, ordinal, interval, and ratio.
+Private functions start with an underscore.
+Unit test files start with test_ or end in _test.
+Both git and linux were developed by Linus Torvalds.
+Seaborn is abbreviated as sns because SNS are the initials of Sam Seaborn from The West Wing.
+pip stands for pip installs packages.
+The first version of python was released in 1991.
+yaml stands for YAML Ain't Markup Language, but originally stood for Yet Another Markup Language.
+Cyclomatic complexity measures the complexity of your code by counting the number of linearly independent paths through your code. 26 is considered the maximum.
+Stop words are words that do not contribute meaning to the text.
+Tokenization is the process of splitting inidividual words into tokens.
+Stemming is the process of reducing inflected words to their word stem.
+Lemmatization is the process of reducing inflected words to their lemma.
+NER stands for named entity recognition, and is the process of identifying named entities in text.
+Keyword extraction is the process of identifying the most important words in a document.
+Cross-validation iterates over various sizes of training and testing sets to more accurately assess the performance of a model.
+A SWOT analysis evaluates strengths, weaknesses, opportunities, and threats.
+On a research paper, the principal investigator is the person who is responsible for the overall direction of the research.
+You typically activate a virtual environment by running source activate env_name.
