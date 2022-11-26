@@ -10,7 +10,7 @@ for i in range(3):
     desk_rgb.append(randint(0, 50))
     card_rgb.append(desk_rgb[i] + 20)
     outline_rgb.append(desk_rgb[i] + 10)
-    gon_rgb.append(desk_rgb[i] - 10) # round to zero
+    gon_rgb.append(max(0,desk_rgb[i] - 10))
 
 for i in (desk_rgb, card_rgb, outline_rgb, gon_rgb):
     colors.append('#%02x%02x%02x' % tuple(i))
@@ -36,9 +36,9 @@ while x <= desk_x:
 
 desk_im = Image.new('RGB', (desk_x, desk_y), colors[0])
 desk_draw = ImageDraw.Draw(desk_im)
-card_font = ImageFont.truetype('calibri.ttf', int(desk_y / 25))
+card_font = ImageFont.truetype('arial.ttf', int(desk_y / 25))
 
-for i in range(randint(10, 30)):
+for i in range(randint(20, 50)):
     gon = randint(0, len(xy_map))
     x = xy_map[gon][0]
     y = xy_map[gon][1]
