@@ -39,7 +39,7 @@ desk_draw = ImageDraw.Draw(desk_im)
 card_font = ImageFont.truetype('arial.ttf', int(desk_y / 25))
 
 for i in range(randint(20, 50)):
-    gon = randint(0, len(xy_map))
+    gon = randint(0, len(xy_map) - 1)
     x = xy_map[gon][0]
     y = xy_map[gon][1]
     gon_color = colors[2] if randint(0,2) == 0 else colors[3]
