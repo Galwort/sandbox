@@ -13,8 +13,7 @@ Data science is the process of extracting knowledge from data. AI is the ability
 Matthews correlation coefficient is a measure of the quality of binary and multiclass classifications.
 Target variable is the variable that is being predicted, and can also be referred to as the label.
 Train-test split is a method of splitting data into training and testing sets.
-y = fx + e, in which e represents error.
-Bias is the difference between the average prediction of our model and the correct value which we are trying to predict.
+Bias is the difference between the average prediction of a model and the correct value which we are trying to predict.
 Variance is the variability of a model prediction for a given data point.
 F1 score is 2 / (1 / precision + 1 / recall).
 A hyperparameter is a parameter whose value is set before the learning process begins.
@@ -50,9 +49,9 @@ NOIR is a mnemonic for the four types of data: numerical, ordinal, interval, and
 Private functions start with an underscore.
 Unit test files start with test_ or end in _test.
 Both git and linux were developed by Linus Torvalds.
-Seaborn is abbreviated as sns because SNS are the initials of Sam Seaborn from The West Wing.
+Seaborn is abbreviated as sns because those are the initials of Sam Seaborn from The West Wing.
 pip stands for pip installs packages.
-The first version of python was released in 1991.
+The first version of python was released in 1991, by Guido van Rossum.
 yaml stands for YAML Ain't Markup Language, but originally stood for Yet Another Markup Language.
 Cyclomatic complexity measures the complexity of your code by counting the number of linearly independent paths through your code. 26 is considered the maximum.
 Stop words are words that do not contribute meaning to the text.
@@ -65,3 +64,4 @@ Cross-validation iterates over various sizes of training and testing sets to mor
 A SWOT analysis evaluates strengths, weaknesses, opportunities, and threats.
 On a research paper, the principal investigator is the person who is responsible for the overall direction of the research.
 You typically activate a virtual environment by running source activate env_name.
+Ensemble learning is the process of combining multiple models to create a more powerful model.
