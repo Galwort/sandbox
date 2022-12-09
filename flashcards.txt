@@ -65,3 +65,13 @@ A SWOT analysis evaluates strengths, weaknesses, opportunities, and threats.
 On a research paper, the principal investigator is the person who is responsible for the overall direction of the research.
 You typically activate a virtual environment by running source activate env_name.
 Ensemble learning is the process of combining multiple models to create a more powerful model.
+The Westgard rules are a set of statistical patterns, each being unlikely to occur by random variability.
+A confusion matrix is a table that is often used to describe the performance of a classification model.
+A feature is an individual measurable property or characteristic of a phenomenon being observed.
+Classification is the process of predicting a label of a data point.
+Regression is the process of predicting a continuous value.
+Random forest is a type of ensemble learning, where a number of decision trees are combined to make a more powerful prediction.
+Irreducible error is the error that cannot be reduced by any model.
+Bayes theorem is the probability of an event, based on prior knowledge of conditions that might be related to the event.
+Naive Bayes Classifier is a probabilistic machine learning model that is used for classification task.
+Data integrity is the accuracy and consistency of data.
