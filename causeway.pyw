@@ -3,20 +3,27 @@ from os import getcwd
 from PIL import Image, ImageDraw
 from random import randint
 
-desk_rgb, gon_rgb, tow_rgb, gon2_rgb, tow2_rgb, colors, xy_map = ([] for i in range(7))
+desk_rgb = []
 
-# iterating through rgb values for desk, gons, and towers
 for i in range(3):
     desk_rgb.append(randint(10, 100))
 
 desk_color = "#%02x%02x%02x" % tuple(desk_rgb)
 
+accent_rgb = []
+
+for i in range(3):
+    accent_rgb.append(randint(50, 150))
+
+accent_color = "#%02x%02x%02x" % tuple(accent_rgb)
+
 # creating random colors for gons and towers based on desk color
 def create_colors(desk_rgb=desk_rgb):
     gon_rgb, tow_rgb = ([] for i in range(2))
     ri = randint(-10, 10)
+    op_rgb = accent_rgb if randint(0,5) == 0 else desk_rgb
     for i in range(3):
-        gon_rgb.append(desk_rgb[i] + ri)
+        gon_rgb.append(op_rgb[i] + ri)
         tow_rgb.append(max(0, gon_rgb[i] - 5))
 
     gon_color = "#%02x%02x%02x" % tuple(gon_rgb)
@@ -31,6 +38,7 @@ def create_desk(gon_sz=10):
 
     # creating list of coordinates for the hexagons
     def create_map(gon_sz=gon_sz):
+        xy_map = []
         x, y = gon_sz * 8, 0
         i = 0
 
@@ -54,7 +62,7 @@ def create_desk(gon_sz=10):
             x = gon_sz * 20
             i += desk_x // (gon_sz * 24)
         xy_map.sort(key=lambda x: x[0])
-
+        return xy_map
     create_map()
 
     desk_im = Image.new("RGB", (desk_x, desk_y), desk_color)
@@ -62,6 +70,7 @@ def create_desk(gon_sz=10):
 
     # randomly placing gons at coordinates in xy_map
     def create_gons(towers=True):
+        xy_map = create_map()
         gon = 0
         while gon < len(xy_map):
             x = xy_map[gon][1]
