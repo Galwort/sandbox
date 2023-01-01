@@ -17,11 +17,12 @@ def create_colors(desk_rgb=desk_rgb):
     ri = randint(-10, 10)
     for i in range(3):
         gon_rgb.append(desk_rgb[i] + ri)
-        tow_rgb.append(max(0,gon_rgb[i] - 5))
+        tow_rgb.append(max(0, gon_rgb[i] - 5))
 
     gon_color = "#%02x%02x%02x" % tuple(gon_rgb)
     tow_color = "#%02x%02x%02x" % tuple(tow_rgb)
     return gon_color, tow_color
+
 
 # function to create and set desktop background
 def create_desk(gon_sz=10):
@@ -40,7 +41,7 @@ def create_desk(gon_sz=10):
                 i += 1
             y += gon_sz * 14
             x = gon_sz * 8
-            i += (desk_x // (gon_sz * 24))
+            i += desk_x // (gon_sz * 24)
 
         x, y = gon_sz * 20, gon_sz * 7
         i = desk_x // (gon_sz * 24)
@@ -51,8 +52,9 @@ def create_desk(gon_sz=10):
                 i += 1
             y += gon_sz * 14
             x = gon_sz * 20
-            i += (desk_x // (gon_sz * 24))
+            i += desk_x // (gon_sz * 24)
         xy_map.sort(key=lambda x: x[0])
+
     create_map()
 
     desk_im = Image.new("RGB", (desk_x, desk_y), desk_color)
