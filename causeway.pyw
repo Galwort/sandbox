@@ -8,14 +8,20 @@ desk_rgb, gon_rgb, tow_rgb, gon2_rgb, tow2_rgb, colors, xy_map = ([] for i in ra
 # iterating through rgb values for desk, gons, and towers
 for i in range(3):
     desk_rgb.append(randint(10, 100))
-    gon_rgb.append(desk_rgb[i] - 10)
-    tow_rgb.append(max(0, gon_rgb[i] - 5))
-    gon2_rgb.append(desk_rgb[i] + 20)
-    tow2_rgb.append(gon2_rgb[i] - 5)
 
-# converting rgb values to hex and appending to colors list
-for i in (desk_rgb, gon_rgb, tow_rgb, gon2_rgb, tow2_rgb):
-    colors.append("#%02x%02x%02x" % tuple(i))
+desk_color = "#%02x%02x%02x" % tuple(desk_rgb)
+
+# creating random colors for gons and towers based on desk color
+def create_colors(desk_rgb=desk_rgb):
+    gon_rgb, tow_rgb = ([] for i in range(2))
+    ri = randint(-10, 10)
+    for i in range(3):
+        gon_rgb.append(desk_rgb[i] + ri)
+        tow_rgb.append(max(0,gon_rgb[i] - 5))
+
+    gon_color = "#%02x%02x%02x" % tuple(gon_rgb)
+    tow_color = "#%02x%02x%02x" % tuple(tow_rgb)
+    return gon_color, tow_color
 
 # function to create and set desktop background
 def create_desk(gon_sz=10):
@@ -49,7 +55,7 @@ def create_desk(gon_sz=10):
         xy_map.sort(key=lambda x: x[0])
     create_map()
 
-    desk_im = Image.new("RGB", (desk_x, desk_y), colors[0])
+    desk_im = Image.new("RGB", (desk_x, desk_y), desk_color)
     desk_draw = ImageDraw.Draw(desk_im)
 
     # randomly placing gons at coordinates in xy_map
@@ -58,9 +64,7 @@ def create_desk(gon_sz=10):
         while gon < len(xy_map):
             x = xy_map[gon][1]
             y = xy_map[gon][2]
-            gon_color, tow_color = (
-                (colors[1], colors[2]) if randint(0, 2) == 0 else (colors[3], colors[4])
-            )
+            gon_color, tow_color = create_colors()
 
             desk_draw.polygon(
                 [
@@ -95,7 +99,7 @@ def create_desk(gon_sz=10):
                     ],
                     fill=tow_color,
                 )
-            gon += randint(1, 3)
+            gon += randint(1, 2)
 
     create_gons()
     desk_im.save("causeway.png")
